@@ -1,4 +1,21 @@
 #!/usr/bin/env python3
+"""
+Пошуковий рушій (консольний). Реалізовано власні TF‑IDF та BM25: побудова
+словника, TF/DF/IDF, косинусна схожість і BM25 з нормалізацією довжини.
+Препроцесинг: очищення URL/HTML/emoji/пунктуації, стоп‑слова, біграми,
+спел‑корекція та (за наявності) синоніми WordNet. Є оцінки P@5, R@5, F1@5,
+nDCG, AP, MRR і інтерактивний режим введення запитів.
+Виконала: Юлія Українець, група КС-51, 21/09/2025.
+"""
+"""
+Console search engine. Custom TF‑IDF and BM25 implemented: vocabulary,
+TF/DF/IDF, cosine similarity, and BM25 with length normalization. Preprocessing
+includes URL/HTML/emoji/punctuation cleanup, stopwords, bigrams, spell
+correction and (if available) WordNet synonyms. Metrics: P@5, R@5, F1@5, nDCG,
+AP, MRR. Interactive console supports custom queries. Author: Yuliia
+Ukrainets (KS‑51). Date: 21/09/2025.
+"""
+
 import re, math, html, ast, string, os, time, argparse
 from collections import Counter
 from datetime import datetime
