@@ -1,5 +1,6 @@
 # full_text_searcher
 Full‑Text Search Console App
+
 A console search engine over a provided corpus using:
 - TF‑IDF with cosine similarity
 - BM25 (classic, tuned)
